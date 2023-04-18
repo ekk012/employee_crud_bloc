@@ -141,6 +141,7 @@ class _EmployeeListPageState extends State<EmployeeListPage> {
                                     height:
                                         MediaQuery.of(context).size.height / 7,
                                     child: GestureDetector(
+                                      behavior: HitTestBehavior.translucent,
                                       onTap: () {
                                         Navigator.push(
                                           context,
@@ -268,6 +269,7 @@ class _EmployeeListPageState extends State<EmployeeListPage> {
                                           MediaQuery.of(context).size.height /
                                               7,
                                       child: GestureDetector(
+                                        behavior: HitTestBehavior.translucent,
                                         onTap: () {
                                           Navigator.push(
                                             context,

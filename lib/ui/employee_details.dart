@@ -221,7 +221,10 @@ class _EditEmployeeState extends State<EditEmployee> {
               children: [
                 MaterialButton(
                   color: Colors.lightBlue[100],
-                  onPressed: () {},
+                  onPressed: () {
+                    _nameController.text = '';
+                    _roleController.text = '';
+                  },
                   child: Text(
                     'Cancel',
                     style: TextStyle(color: Colors.blue[500]),
@@ -242,15 +245,11 @@ class _EditEmployeeState extends State<EditEmployee> {
                       _fromDateController.text.isEmpty
                           ? _validatefromDate = true
                           : _validatefromDate = false;
-                      _toDateController.text.isEmpty
-                          ? _validatetoDate = true
-                          : _validatetoDate = false;
                     });
 
                     if (_validateName == false &&
                         _validateRole == false &&
-                        _validatefromDate == false &&
-                        _validatetoDate == false) {
+                        _validatefromDate == false) {
                       var employee = Employee();
                       employee.id = widget.employee.id;
                       employee.name = _nameController.text;
