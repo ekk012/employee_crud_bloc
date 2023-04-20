@@ -32,6 +32,16 @@ class _EditEmployeeState extends State<EditEmployee> {
     super.initState();
   }
 
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    _nameController.dispose();
+    _fromDateController.dispose();
+    _toDateController.dispose();
+    _roleController.dispose();
+    super.dispose();
+  }
+
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _fromDateController = TextEditingController();
   final TextEditingController _toDateController = TextEditingController();

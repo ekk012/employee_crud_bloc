@@ -42,6 +42,15 @@ class _AddEmployeePageState extends State<AddEmployeePage> {
 
     super.initState();
   }
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    _nameController.dispose();
+    _fromDateController.dispose();
+    _toDateController.dispose();
+    _roleController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
